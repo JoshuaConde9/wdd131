@@ -23,7 +23,7 @@ header{
     min-height: 5.4rem;
 }
 
-header p {
+h1 {
     font-size: 40px;
     position: relative;
     padding-left: 3rem;
@@ -32,7 +32,7 @@ header p {
     text-decoration: underline overline var(--accent2-color);
 }
 
-h1 {
+h2 {
     margin: 1rem;
     color: var(--accent1-color);
 }
@@ -98,14 +98,14 @@ footer {
     }
 }
 @media (max-width: 740px) {
-    nav ul {
+    nav div {
         display: none;
         flex-direction: column;
         background: var(--primary-color);
         padding: 1rem;
     }
 
-    nav ul.open {
+    nav div.open {
         display: flex;
     }
 

@@ -23,7 +23,7 @@ header {
     background-color: var(--primary-color);
 }
 
-header p {
+h1 {
     font-size: 40px;
     position: absolute;
     padding-left: 3rem;
@@ -31,7 +31,7 @@ header p {
     color: var(--accent1-color);
 }
 
-h1 {
+h2 {
     margin: 1rem;
     color: var(--accent1-color);
 }
