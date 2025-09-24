@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Patrick Hand";
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #F45B69;
+    --secondary-color: #EBEBEB;
+    --accent1-color: #1b6060;
+    --accent2-color: #891c1c;
+}
+
+body {
+    display: grid;
+}
+
+header {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+h1,
+h2 {
+    justify-self: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+h1 {
+    color: var(--secondary-color);
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, .5);
+}
+
+main {
+    background-color: var(--secondary-color);
+}
+
+.hero {
+    display: block;
+    width: 100%;
+    height: auto;
+    align-self: center;
+    border-top: .5rem solid var(--accent2-color);
+    border-bottom: .3rem solid var(--accent1-color);
+    object-fit: cover;
+}
+
+span {
+    font-weight: 900;
+    text-align: right;
+}
+
+li, .label, #temperature, #windspeed, #windchill{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: 100;
+    list-style-type: none;
+    width: 100%;
+    gap: 1rem;
+}
+
+#temperature, #windspeed, #windchill {
+    text-align: left;
+}
+
+section{
+    position: absolute;
+    border: .2rem solid var(--primary-color);
+    margin: 1rem;
+    padding: 0rem 1rem 1rem 1rem;
+    background-color: #ebebebe9
+}
+
+
+.data {
+    top: 150px;
+    left: 60px;
+}
+
+.weather {
+    right: 60px;
+    top: 500px;
+    display: grid;
+}
+
+.weather h2, .data h2{
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: .5rem;
+}
+
+footer p {
+    justify-self: center;
+}
+
+.weather h2::after {
+    content: "🌦️";
+}
+
+/* Small view */
+@media (max-width: 999px) {
+    header {
+        background-color: var(--primary-color);
+        width: 100%;
+    }
+    section {
+        display: flex;
+        position:static;
+        flex-direction: column;
+        border: .2rem solid var(--primary-color);
+        margin: 1rem;
+        padding: 0rem 1rem 1rem 1rem;
+
+    }
+    .hero {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-top: .5rem solid var(--accent2-color);
+        border-bottom: .3rem solid var(--accent1-color);
+    }
+    body {
+        display: grid;
+    }
+
+    section img {
+        width: 10rem;
+        justify-self: center;
+        align-self: center;
+        scale:inherit;
+    }
+    h1,h2 {
+        align-self: center;
+        padding: 1rem;
+        font-weight: bold;
+    }
+    footer {
+        background-color: var(--primary-color);
+        color: var(--accent2-color);
+        padding: .5rem;
+    }
+    footer p {
+        justify-self: center;
+    }
+    .weather h2::after {
+        content: "";
+    }
+}
+
+@media (min-width: 1000px){
+    .logo {
+        display: none;
+    }
+}

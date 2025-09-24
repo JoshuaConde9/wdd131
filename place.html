@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Japan - Joshua Conde Pérez</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Japan Page by Joshua Conde Pérez.">
+    <meta name="author" content="Joshua Conde Pérez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Japan</h1>
+    </header>
+    <main>
+        <div>
+            <div>
+                <picture>
+                    <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                    <img class="hero" src="images/hero-small.webp" alt="Japan" width="400" height="200">
+                </picture>
+            </div>
+            
+            <section class="data">
+                <h2>Data</h2>
+                <ul>
+                    <li>
+                        <span>Area:</span>
+                        377,972 sq km
+                    </li>
+                    <li>
+                        <span>Population:</span>
+                        122,958,345 
+                    </li>
+                    <li>
+                        <span>Capital:</span>
+                        Tokyo
+                    </li>
+                    <li>
+                        <span>Languages:</span>
+                        Japanese
+                    </li>
+                    <li>
+                        <span>Currency:</span>
+                        Yen
+                    </li>
+                    <li>
+                        <span>Time Zone:</span>
+                        UTC+9
+                    </li>
+                    <li>
+                        <span>Calling Code:</span>
+                        +81
+                    </li>
+                    <li>
+                        <span>Internet TLD:</span>
+                        .jp
+                    </li>
+                </ul>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+
+                <img class="logo" src="images/weather-logo.svg" alt="Weather Logo">
+                <ul>
+                    <li class="label">
+                        <span>Temperature:</span>
+                        <span id="temperature">7°C</span>
+                    </li>
+                    <li class="label">
+                        <span>Conditions:</span>
+                        Mostly Sunny
+                    </li>
+                    <li class="label">
+                        <span>Wind:</span>
+                        <span id="windspeed">5km/h</span>
+                    </li class="label">
+                    <li class="label">
+                        <span>Wind Chill:</span>
+                        <span id="windchill"></span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+        </p>
+        <p>
+            <span id="lastmodified"></span>
+        </p>
+    </footer>
+</body>
+</html>
