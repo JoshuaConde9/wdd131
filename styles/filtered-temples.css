@@ -34,7 +34,7 @@ h1 {
     text-decoration: underline overline var(--accent2-color);
 }
 
-h2 {
+h3 {
     margin: 1rem;
     color: var(--accent1-color);
 }
@@ -64,24 +64,38 @@ main {
     
 }
 
-.container {
+#container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
-    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+    gap: 10px;
+    justify-content: center;
     margin-bottom: 2rem;
 }
 
-.container img {
-    width: 100%;
+#container img {
+    width: 80%;
     height: auto;
     display: block;
-    border: 2px solid var(--accent2-color);
+    place-self: center;
+    box-shadow: 0 0 15px #2a2828ff;
+    margin-top: 20px;
+}
+
+figure {
+    background-color: lightgray;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    height: 320px;
+    max-width: 260px;
 }
 
 figcaption {
     padding-top: 0.5rem;
     font-style: italic;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .container img:hover{
@@ -91,7 +105,13 @@ figcaption {
 footer {
     background-color: var(--accent1-color);
     padding: 1rem;
+    margin-top: 1frem;
     color: var(--secondary-color)
+}
+
+.label {
+    color: var(--accent1-color);
+    font-style: italic;
 }
 
 @media (min-width: 740px) {

@@ -3,6 +3,12 @@ const lastModified = document.querySelector("#lastmodified");
 const today = new Date();
 year.innerHTML = `©<span class="highlight">${today.getFullYear()}</span>🦋Joshua Conde Pérez🦋Colombia`;
 
+const homeLink = document.querySelector("#home");
+const oldLink = document.querySelector("#old");
+const newLink = document.querySelector("#new");
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
+
 const lastModifiedDate = document.lastModified;
 lastModified.textContent = `Last Modified: ${lastModifiedDate}`;
 
@@ -100,23 +106,73 @@ const temples = [
 
 let container = document.getElementById("container")
 
-temples.forEach(function (temple) {
-    console.log(temple);
-
+function createTempleCard(temple) {
     let figure = document.createElement("figure");
-    let h2 = document.createElement("h2");
-    h2.textContent = temple.templeName;
+    let h3 = document.createElement("h3");
+    h3.textContent = temple.templeName;
     let img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.templeName;
     img.loading = "lazy";
     let caption = document.createElement("figcaption");
-    caption.innerHTML = `Location: ${temple.location}<br>Dedicated: ${temple.dedicated}<br>Size: ${temple.area} sq ft`;
+    caption.innerHTML = `<span class="label">Location:</span> ${temple.location}<br><span class="label">Dedicated:</span> ${temple.dedicated}<br><span class="label">Size:</span> ${temple.area} sq ft`;
 
-    figure.appendChild(h2);
-    figure.appendChild(img);
+    figure.appendChild(h3);
     figure.appendChild(caption);
+    figure.appendChild(img);
 
-    container.appendChild(figure);
+    return figure;
+}
+
+temples.forEach(temple => {
+    container.appendChild(createTempleCard(temple));
 });
 
+
+oldLink.addEventListener("click", () => {
+    container.innerHTML = "";
+    const oldTemples = temples.filter(temple => {
+        let year = parseInt(temple.dedicated.split(",")[0]);
+        return year < 1900;
+    });
+    oldTemples.forEach(temple => {
+        container.appendChild(createTempleCard(temple));
+    });
+});
+
+newLink.addEventListener("click", () => {
+    container.innerHTML = "";
+    const newTemples = temples.filter(temple => {
+        let year = parseInt(temple.dedicated.split(",")[0]);
+        return year > 2000;
+    });
+    newTemples.forEach(temple => {
+        container.appendChild(createTempleCard(temple));
+    });
+});
+
+largeLink.addEventListener("click", () => {
+    container.innerHTML = "";
+    const largeTemples = temples.filter(temple => {
+        return temple.area > 90000;
+    });
+    largeTemples.forEach(temple => {
+        container.appendChild(createTempleCard(temple));
+    });
+});
+
+smallLink.addEventListener("click", () => {
+    container.innerHTML = "";
+    const smallTemples = temples.filter(temple => {
+        return temple.area < 10000;
+    });
+    smallTemples.forEach(temple => {
+        container.appendChild(createTempleCard(temple));
+    });
+});
+
+homeLink.addEventListener("click", () => {
+    temples.forEach(temple => {
+        container.appendChild(createTempleCard(temple));
+    });
+});
