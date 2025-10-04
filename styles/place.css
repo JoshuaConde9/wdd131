@@ -88,7 +88,7 @@ section{
 }
 
 .weather h2, .data h2{
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
 }
 
 footer {

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Balthazar", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.quintessential-regular {
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.balthazar-regular {
+    font-family: "Balthazar", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #101120;
+    --secondary-color: #383F51;
+    --accent1-color: #DDDBF1;
+    --accent2-color: #D35269;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Quintessential", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h2, h3, h4, h5 {
+    padding: 1% 0;
+    text-shadow: 0.5px 0.5px 0.5px var(--accent2-color);
+}
+
+p{
+    font-size: larger;
+}
+
+figure img {
+    max-width: 500px;
+    height: auto;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.header-text {
+    grid-column-start: 1;
+}
+
+nav {
+    grid-column-start: 2;
+    justify-self: right;
+    align-self: center;
+    padding-right: 2rem;
+}
+
+.navigation{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-direction: column;
+}
+
+nav a {
+    border: 2px solid #101120;
+    padding: 1rem;
+    margin: 1rem;
+    color: var(--accent1-color);
+    justify-self: center;
+    font-size: 1.2rem;
+}
+
+nav a:hover{
+    background-color: var(--primary-color);
+}
+
+#menu {
+    display: none;
+}
+
+.title {
+    padding-left: 2rem;
+    text-align: center;
+    justify-self: left;
+    text-shadow: 2px 2px 1px var(--accent2-color);
+    font-size: 1.4rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+body {
+    background-color: var(--accent1-color);
+}
+
+figure {
+    justify-self: center;
+}
+
+img {
+    border: 2px solid #101120;
+}
+
+figcaption {
+    justify-self: center;
+    padding: 2rem 0 1rem 0;
+    font-size: larger;
+    font-weight: 700;
+
+} 
+
+.colors p {
+    padding: 1rem;
+}
+
+.primary:hover {
+    border: 2px solid #101120;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+}
+.secondary:hover {
+    border: 2px solid #101120;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+.accent1:hover {
+    border: 2px solid #101120;
+    background-color: var(--accent1-color);
+}
+.accent2:hover {
+    border: 2px solid #101120;
+    background-color: var(--accent2-color);
+}
