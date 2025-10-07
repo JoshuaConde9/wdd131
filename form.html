@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form - Joshua Conde Pérez</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <meta name="description" content="WDD 131 - Product Review Form by Joshua Conde Pérez.">
+    <meta name="author" content="Joshua Conde Pérez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Patrick+Hand&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+
+    <header>Product Review</header>
+    <main>
+        <form action="review.html" method="get">
+
+            <fieldset id="product">
+                <label for="choose-a-product">Product name</label>
+                <select name="product" id="choose-a-product" required>
+                    <option disabled selected>Select a Product...</option>
+
+                </select>
+            </fieldset>
+
+            <fieldset id="rating">
+                <legend>Overall Rating</legend>
+                <div class="star-rating">
+                    <input type="radio" name="stars" id="star-a" value="5" required/>
+                    <label for="star-a"></label>
+                
+                    <input type="radio" name="stars" id="star-b" value="4" required/>
+                    <label for="star-b"></label>
+                
+                    <input type="radio" name="stars" id="star-c" value="3" required/>
+                    <label for="star-c"></label>
+                
+                    <input type="radio" name="stars" id="star-d" value="2" required/>
+                    <label for="star-d"></label>
+                
+                    <input type="radio" name="stars" id="star-e" value="1" required/>
+                    <label for="star-e"></label>
+                </div>
+            </fieldset>
+
+            <fieldset id="date">
+                <label for="choose-a-date">Date of Installation</label>
+                <input type="date" id="choose-a-date" name="date" required>
+            </fieldset>
+
+            <fieldset id="checkbox">
+                <legend>Which features did you find useful in the product? <br><span id="apply">(Check all that apply)</span></legend>
+                <input type="checkbox" id="durability" name="useful-features" value="Durability">
+                <label for="durability">Durability</label>
+                <input type="checkbox" id="ease-of-use" name="useful-features" value="Ease of Use">
+                <label for="ease-of-use">Ease of Use</label>
+                <input type="checkbox" id="performance" name="useful-features" value="Performance">
+                <label for="performance">Performance</label>
+                <input type="checkbox" id="design" name="useful-features" value="Design">
+                <label for="design">Design</label>
+            </fieldset>
+
+            <fieldset id="review">
+                <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea name="written-review" id="written-review" optional></textarea>
+            </fieldset>
+
+            <fieldset id="username">
+                <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" name="user-name" id="user-name">
+
+            </fieldset>
+            <fieldset>
+                <input type="submit" name="submit-review" id="submit" value="Post Review">
+                <label for="submit"></label>
+            </fieldset>
+        </form>
+    </main>
+    
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+        </p>
+        <p>
+            <span id="lastmodified"></span>
+        </p>
+    </footer>
+</body>
+</html>
