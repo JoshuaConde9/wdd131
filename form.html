@@ -14,14 +14,16 @@
 </head>
 <body>
 
-    <header>Product Review</header>
+    <header>
+        <h1>Product Review</h1>
+    </header>
     <main>
         <form action="review.html" method="get">
 
             <fieldset id="product">
                 <label for="choose-a-product">Product name</label>
                 <select name="product" id="choose-a-product" required>
-                    <option disabled selected>Select a Product...</option>
+                    <option disabled selected value="">Select a Product...</option>
 
                 </select>
             </fieldset>
@@ -65,7 +67,7 @@
 
             <fieldset id="review">
                 <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
-                <textarea name="written-review" id="written-review" optional></textarea>
+                <textarea name="written-review" id="written-review"></textarea>
             </fieldset>
 
             <fieldset id="username">

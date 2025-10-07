@@ -46,7 +46,8 @@ main {
 }
 
 #written-review {
-    padding: 2.5rem;
+    padding: 1rem;
+    height: 6rem;
 }
 
 #apply, .optional {
@@ -154,10 +155,5 @@ footer {
     content: '\2605';
 }
 
-@-moz-document url-prefix() {
-    .star-rating input:checked~label:before {
-        font-size: 36px;
-        line-height: 21px;
-    }
-}
+
 /* stars *//* stars *//* stars *//* stars *//* stars *//* stars *//* stars *//* stars *//* stars *//* stars *//* stars */
