@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Conde | Digital Art and Drawings</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <meta name="description" content="Joshua Conde's Art Portfolio.">
+    <meta name="author" content="Joshua Conde Pérez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balthazar&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>Joshua Conde</h1>
+            <p class="header-text">Digital Art and Drawings</p>
+            <button type="button" id="menu"></button>
+        </div>
+        <nav id="header-nav">
+            <div class="navigation">
+                <a href="home.html" id="Home">Home</a>
+                <a href="illustrations.html" id="Illustrations">Illustrations</a>
+                <a href="sketches.html" id="Sketches">Sketches</a>
+                <a href="contact.html" id="Contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <h2>Contact Me</h2>
+            <p>Thank you for visiting my portfolio!
+            If you’d like to get in touch with me, you can leave your name, your e-mail and brief message
+            and I will respond as soon as possible!
+            <br>
+            You can also connect with me on my social media pages linked below.</p>
+        </div>
+        <form action="review.html" method="get">
+            <fieldset id="username">
+                <label for="user-name">Your Name</label>
+                <input type="text" name="user-name" id="user-name" required>
+            
+            </fieldset>
+
+            <fieldset id="email">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+            </fieldset>
+
+            <fieldset id="subject">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" required>
+            
+            </fieldset>
+        
+            <fieldset id="review">
+                <label for="written-review">Message</label>
+                <textarea name="written-review" id="written-review"></textarea>
+            </fieldset>
+    
+            <fieldset>
+                <input type="submit" name="submit-review" id="submit" value="Post Review">
+                <label for="submit"></label>
+            </fieldset>
+        </form>
+        <div>
+            <nav class="icons">
+                <a href="https://www.facebook.com/share/17SprVkdrL/" id="facebook">
+                    <img src="images/facebook-icon.png" alt="Facebook">
+                    <p>Contact me on Facebook</p>
+                </a>
+                <a href="https://www.instagram.com/yoshi.fake/" id="instagram">
+                    <img src="images/instagram-icon.png" alt="instagram">
+                    <p>Contact me on instagram</p>
+                </a>
+                <a href="https://www.linkedin.com/in/joshua-conde-p%C3%A9rez-520a81374/" id="linkedin">
+                    <img src="images/linkedin-icon.png" alt="Linkedin">
+                    <p>Contact me on LinkedIn</p>
+                </a>
+            </nav>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+        </p>
+        <p>
+            <span id="lastmodified"></span>
+        </p>
+    </footer>
+</body>
+
+</html>
